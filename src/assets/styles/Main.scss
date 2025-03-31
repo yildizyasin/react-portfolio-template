@@ -1,3 +1,14 @@
+* {
+    box-sizing: border-box; /* Include padding and border in element dimensions */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%; /* Ensure the body spans the full viewport width */
+}
+
 .dark-mode .about-section {
     background-color: rgba(0, 0, 0, 0.2);
 }
@@ -9,13 +20,14 @@
     // justify-content: center; /* Center vertically */
     gap: 30px;
     width: 100%;
-    padding: 10% 15%;
+    padding: 10% 5%; /* Reduce padding for smaller screens */
     min-height: 700px;
     background-image: url("../images/bg-dark-new.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .about-section .content {
@@ -24,6 +36,9 @@
     align-items: center; /* Center content horizontally */
     text-align: center; /* Center text */
     z-index: 2;
+    width: 100%; /* Ensure content spans the full width */
+    padding: 0; /* Remove unnecessary padding */
+    margin: 0 auto; /* Center the content */
 
     .social_icons {
         display: flex;
@@ -64,6 +79,7 @@
     margin-top: 20px;
     margin-block-start: 0px;
     margin-block-end: 0px;
+    text-align: center;
 }
 
 .about-section .content p {
@@ -84,6 +100,12 @@
     font-size: 4rem; // Increase the font size
     font-family: "Epilogue", sans-serif;
     letter-spacing: 2px; // Optional: Add spacing between letters for better readability
+    word-wrap: break-word; /* Prevent long text from overflowing */
+}
+
+.about-section p {
+    text-align: center; /* Ensure text is centered */
+    word-wrap: break-word; /* Prevent long text from overflowing */
 }
 
 .about-section .image-wrapper {
@@ -155,6 +177,20 @@
             text-align: left;
         }
 
+        .about-section .image-wrapper {
+            z-index: 2;
+            display: flex;
+            padding-top: 15%;
+            justify-content: center; /* Center image horizontally */
+            width: 100%;
+            img {
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
         .container {
             display: initial;
         }
@@ -183,7 +219,7 @@
         }
 
         .about-section .content {
-            width: 90%;
+            width: 100%;
             padding-left: 5%;
             padding-right: 5%;
             padding-bottom: 5%;
@@ -196,6 +232,35 @@
     }
 }
 
+@media (max-width: 768px) {
+    .about-section {
+        padding: 5% 5%; /* Adjust padding for mobile */
+    }
+
+    .about-section .content {
+        width: 90%; /* Reduce width for better centering */
+        margin: 0 auto; /* Center the content */
+    }
+
+    .about-section h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    padding-top: 15%;
+    padding-bottom: 45%;
+
+    }
+
+    .about-section p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    padding-top: 15%;
+
+    }
+
+    .about-section .image-wrapper img {
+        width: 200px; /* Adjust image size for mobile */
+        height: 200px;
+    }
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -204,6 +269,8 @@
     // height: 100vh; /* Full viewport height */
     text-align: center;
     // background-color: #0d1116;
+    max-width: 100%; /* Ensure the container doesn't exceed the viewport width */
+    margin: 0 auto; /* Center the container */
 }
 
 .social_icons {
