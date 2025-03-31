@@ -4,13 +4,14 @@
 
 .about-section {
     display: flex;
+    flex-direction: column;
+    // align-items: center; /* Center horizontally */
+    // justify-content: center; /* Center vertically */
     gap: 30px;
-    justify-content: flex-start;
-    align-items: center;
     width: 100%;
-    padding: 0px 15%;
+    padding: 10% 15%;
     min-height: 700px;
-    background-image: url("../images/bg-dark.png");
+    background-image: url("../images/bg-dark-new.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -18,11 +19,15 @@
 }
 
 .about-section .content {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
     z-index: 2;
 
     .social_icons {
         display: flex;
+        gap: 15px;
         flex-direction: row;
         gap: 10px;
         color: white;
@@ -37,23 +42,60 @@
     }
 
     p {
-        font-size: 1.5em;
+        font-size: 1.2rem;
+        font-family: "Epilogue", sans-serif;
+        margin-top: 10px;
         margin-block-start: 0px;
         margin-block-end: 0px;
     }
 
     h1 {
-        font-size: 5em;
+        font-size: 2rem;
+        font-family: "Epilogue", sans-serif;
+        margin-top: 20px;
         margin-block-start: 0px;
         margin-block-end: 0px;
     }
 }
 
+.about-section .content h1 {
+    font-size: 10rem; /* Adjusted font size */
+    font-family: "Epilogue", sans-serif;
+    margin-top: 20px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+.about-section .content p {
+    font-size: 1.5rem; /* Increased font size for emphasis */
+    font-family: "Epilogue", sans-serif;
+    margin-top: 10px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    text-transform: uppercase; /* Capitalize the text */
+    letter-spacing: 2px; /* Add spacing between letters */
+    text-align: center; /* Ensure the text is centered */
+    max-width: 600px; /* Optional: Limit the width for better readability */
+}
+
+.about-section h1 {
+    text-align: center; // Ensure the text is center-aligned
+    margin: 0 auto; // Center the text horizontally
+    font-size: 4rem; // Increase the font size
+    font-family: "Epilogue", sans-serif;
+    letter-spacing: 2px; // Optional: Add spacing between letters for better readability
+}
+
 .about-section .image-wrapper {
     z-index: 2;
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    width: 100%;
     img {
-        width: 150px;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
+        object-fit: cover;
     }
 }
 
@@ -153,3 +195,30 @@
         }
     }
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // height: 100vh; /* Full viewport height */
+    text-align: center;
+    // background-color: #0d1116;
+}
+
+.social_icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Center icons horizontally */
+}
+
+.light-mode .about-section h1 {
+    color: rgb(83, 83, 83); // Set the text color for light mode
+}
+
+
+.light-mode .skill .text-content p {
+    color: rgb(83, 83, 83); // Set the text color for card headings and paragraphs in light mode
+}
+
