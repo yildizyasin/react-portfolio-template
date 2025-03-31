@@ -59,10 +59,12 @@ function Expertise() {
             <div className="text-content">
               <h3>Live Updates</h3>
               <p>
-                I have built a diverse array of web applications from scratch
-                using modern technologies such as React and Flask. I have a
-                strong proficiency in the SDLC process and frontend + backend
-                development.
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.
               </p>
             </div>
           </div>
@@ -73,9 +75,10 @@ function Expertise() {
             <div className="text-content">
               <h3>Custom Notifications</h3>
               <p>
-                Once the application is built, I help clients set up DevOps
-                testing, CI/CD pipelines, and deployment automation to support
-                the successful Go-Live.
+                It was popularised in the 1960s with the release of Letraset
+                sheets containing Lorem Ipsum passages, and more recently with
+                desktop publishing software like Aldus PageMaker including
+                versions of Lorem Ipsum.
               </p>
             </div>
             <div className="image-wrapper-right">

@@ -15,12 +15,18 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const drawerWidth = 240;
-const navItems = [["Contact", "contact"]];
+const navItems = [
+  ["Home", "home"], // Add Home button
+  ["Privacy & Terms", "privacy"],
+];
 
 function Navigation({ parentToChild, modeChange }: any) {
   const { mode } = parentToChild;
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -46,13 +52,27 @@ function Navigation({ parentToChild, modeChange }: any) {
   }, []);
 
   const scrollToSection = (section: string) => {
-    console.log(section);
-    const expertiseElement = document.getElementById(section);
-    if (expertiseElement) {
-      expertiseElement.scrollIntoView({ behavior: "smooth" });
-      console.log("Scrolling to:", expertiseElement); // Debugging: Ensure the element is found
+    if (location.pathname !== "/") {
+      // Navigate to the main route first
+      navigate("/");
+      setTimeout(() => {
+        scrollToTarget(section);
+      }, 300); // Delay to ensure the main route is loaded
     } else {
-      console.error('Element with id "expertise" not found'); // Debugging: Log error if element is not found
+      scrollToTarget(section);
+    }
+  };
+
+  const scrollToTarget = (section: string) => {
+    if (section === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top for Home
+    } else {
+      const targetElement = document.getElementById(section);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      } else {
+        console.error(`Element with id "${section}" not found`);
+      }
     }
   };
 

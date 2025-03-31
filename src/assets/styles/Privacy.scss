@@ -1,0 +1,102 @@
+.contact_wrapper svg {
+  font-size: 1em;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.privacy-form {
+  padding-top: 20px;
+
+  button {
+    float: right;
+    background-color: white;
+    color: #050f0b;
+  }
+
+  button:hover {
+    background-color: #5000ca;
+    color: white;
+  }
+
+  fieldset {
+    background-color: white;
+  }
+}
+
+label {
+  font-size: 1.2rem;
+  font-family: 'DomaineDispNar-Medium', sans-serif;
+}
+
+.form-flex {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 15px;
+}
+
+.form-flex .MuiFormControl-root {
+  width: 100%;
+}
+
+form {
+  width: 100% !important;
+}
+
+.body-form {
+  width: 100% !important;
+  margin-bottom: 15px !important;
+}
+
+#privacy {
+  padding: 10px 5%;
+  background-color: var(--background-color); /* Adjust for dark/light mode */
+  color: var(--text-color); /* Adjust for dark/light mode */
+}
+
+.items-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.policy-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Stack columns on smaller screens */
+    align-items: center;
+  }
+}
+
+.policy-column {
+  flex: 1;
+  background-color: var(--card-background); /* Adjust for dark/light mode */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .read-more-btn {
+    background-color: var(--primary-color); /* Theme color */
+    color: var(--button-text-color); /* Button text color */
+    &:hover {
+      background-color: var(--primary-color-hover); /* Hover effect */
+    }
+  }
+}

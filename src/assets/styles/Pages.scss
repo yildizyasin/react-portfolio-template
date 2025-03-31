@@ -1,0 +1,16 @@
+.page-container {
+  padding: 50px;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.page-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.page-container p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
